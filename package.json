@@ -1,0 +1,25 @@
+{
+  "name": "feed-mta",
+  "version": "1.0.0",
+  "description": "A real-time subway train tracking application using MTA GTFS data.",
+  "main": "main.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "echo 'No build step required'",
+    "deploy": "vercel"
+  },
+  "dependencies": {
+    "protobufjs": "^6.11.2",
+    "d3": "^7.0.0"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "MTA",
+    "GTFS",
+    "subway",
+    "real-time",
+    "tracking"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
