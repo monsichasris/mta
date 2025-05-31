@@ -1,4 +1,3 @@
-// filepath: /feed-mta/main.js
 let STATION_STOP_ID = "635"; // Default stop ID (14 St-Union Sq: downtown)
 let DIRECTION = "S"; // Default direction (downtown)
 const MTA_GTFS_URLS = [
@@ -16,7 +15,7 @@ let trainPositions = {};
 
 async function loadStations() {
   try {
-    const response = await fetch("./assets/stations.json");
+    const response = await fetch("/assets/stations.json");
     const stations = await response.json();
     stationsData = stations;
     populateDropdown(stations);
