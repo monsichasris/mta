@@ -189,22 +189,9 @@ function updateTrain(id, route, arrivalTime, direction, arrivals) {
     .attr("transform", `translate(0, ${position})`)
     .attr("visibility", "visible");
 
-  // Play sound if the position is at the top or bottom
-  if (
-    (direction === "S" && position === maxHeight) ||
-    (direction === "N" && position === 0)
-  ) {
-    playSound();
-  }
-
   trainPositions[id] = position;
   console.log(`Train ${id} is at position ${position} direction ${direction}`);
 }
-
-// function playSound() {
-//     var audio = new Audio('./assets/windchime.mp3');
-//     audio.play();
-// }
 
 function updateCurrentTime() {
   const currentTimeElement = document.getElementById("current-time");
