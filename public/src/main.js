@@ -57,9 +57,8 @@ async function fetchGTFS() {
     );
 
     // Load protobuf schema
-    const root = await protobuf.load(
-      "https://raw.githubusercontent.com/google/transit/master/gtfs-realtime/proto/gtfs-realtime.proto"
-    );
+    const protobufFile = "/assets/gtfs-realtime.proto";
+    const root = await protobuf.load(protobufFile);
     const FeedMessage = root.lookupType("transit_realtime.FeedMessage");
 
     // Decode GTFS-RT data and combine arrivals
